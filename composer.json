@@ -1,0 +1,11 @@
+{
+    "name": "banus/users",
+    "autoload": {
+        "psr-4": {
+            "Users\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    }
+}
