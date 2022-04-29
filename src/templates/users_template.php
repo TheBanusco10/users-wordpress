@@ -11,10 +11,6 @@ if (array_key_exists('max', $atts)) {
     $users = array_slice($usersArray, 0, $atts['max']);
 }
 
-//echo "<pre>";
-//var_dump($users);
-//echo "</pre>";
-
 ?>
 
 <section id="users">
@@ -22,7 +18,12 @@ if (array_key_exists('max', $atts)) {
     foreach ($users as $user) { ?>
     <div class="user">
 
-        <p><?= $user->name ?> - <?= $user->email ?></p>
+        <p class="name">
+            <?= $user->name ?>
+        </p>
+        <p class="email">
+            <?= $user->email ?>
+        </p>
 
     </div>
     <?php

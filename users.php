@@ -9,6 +9,10 @@ Author URI: https://djvdev.com
 License: GPL3
 */
 
+/*
+ * Premium: Select users and send email to them (Newsletter)
+ */
+
 defined( 'ABSPATH' ) or die("You cannot pass");
 
 require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
@@ -17,4 +21,4 @@ use Users\Users;
 
 $usersPlugin = new Users();
 
-$usersPlugin->init();
+$usersPlugin->users_init();
