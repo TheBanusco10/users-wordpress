@@ -6,9 +6,7 @@ defined( 'ABSPATH' ) or die("You cannot pass");
 
 class Users {
 
-    public function __construct() {
-
-    }
+    public function __construct() {}
 
     public function users_init() {
         add_shortcode('users', [$this, 'users_shortcode']);

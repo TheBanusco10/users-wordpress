@@ -2,6 +2,10 @@
 
 defined( 'ABSPATH' ) or die("You cannot pass");
 
+if (!function_exists('is_plugin_active')) {
+    include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+}
+
 $client = new GuzzleHttp\Client();
 
 $usersArray = json_decode($client->get('https://jsonplaceholder.typicode.com/users', ["verify" => false])->getBody()->getContents());
@@ -28,6 +32,14 @@ if (array_key_exists('max', $atts)) {
     </div>
     <?php
     }
-
     ?>
 </section>
+<?php
+    if (is_plugin_active('users-newsletter/users-newsletter.php')):
+        ?>
+        <div class="send-email-container">
+            <button class="send-email-button" data-send-email>Send email</button>
+        </div>
+    <?php
+    endif;
+?>

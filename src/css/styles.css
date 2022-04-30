@@ -1,3 +1,9 @@
+:root {
+
+    --aqua-color: mediumaquamarine;
+
+}
+
 #users {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +26,8 @@
 }
 
 .user:hover {
-    border-bottom: 4px solid mediumaquamarine;
+    border-bottom: 4px solid var(--aqua-color);
+    cursor: pointer;
 }
 
 .user .name {
